@@ -148,7 +148,9 @@ nmap [ {
 nmap ] }
 
 nnoremap <ESC> i
-"inoremap <> <Esc>l
+inoremap <Esc> <Esc>`^:w<CR>
+
+nnoremap ) $
 
 nmap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-j> :m .+1<CR>==
