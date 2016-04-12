@@ -125,8 +125,7 @@ if has("autocmd")
   
   autocmd StdinReadPre * let s:std_in=1
   autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-  autocmd VimLeave * :!open -a iTerm2
-  
+
   autocmd BufRead *.mkd,*.md  set ai formatoptions=tcroqn2 comments=n:>
 
 else
@@ -147,10 +146,13 @@ nmap G Go
 nmap [ {
 nmap ] }
 
-nnoremap <ESC> i
-inoremap <Esc> <Esc>`^:w<CR>
-
+nnoremap ; i
+inoremap ; <Esc>`^:w<CR>
 nnoremap ) $
+
+vnoremap <Tab> > 
+vnoremap <S-Tab> <
+
 
 nmap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-j> :m .+1<CR>==
@@ -159,4 +161,8 @@ inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
+
+
+
 
