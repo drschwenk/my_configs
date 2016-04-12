@@ -143,8 +143,6 @@ endif
 " Start of custom mappings
 inoremap <S-CR> <Esc>
 nmap G Go
-nmap [ {
-nmap ] }
 
 nnoremap ; i
 inoremap ; <Esc>`^:w<CR>
@@ -152,7 +150,7 @@ nnoremap ) $
 
 vnoremap <Tab> > 
 vnoremap <S-Tab> <
-
+inoremap ( ()<Esc>i
 
 nmap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-j> :m .+1<CR>==
@@ -161,8 +159,3 @@ inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
-
-
-
-
-

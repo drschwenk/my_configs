@@ -27,7 +27,7 @@ alias ee='vv scp://ec2_ds//home/ubuntu/'
 
 alias man='man -P vimpager'
 
-alias py='python'
+alias py='python3'
 alias py2='python2'
 alias py3='python3'
 alias ipl='jupyter notebook'
@@ -106,4 +106,7 @@ function ppjson(){
 }
 
 
+function math(){
+	echo "$(($*))"
+}
 
