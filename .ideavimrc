@@ -1,0 +1,44 @@
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+filetype off   
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+set clipboard=unnamed
+let mapleader = ','
+" set the runtime path to include Vundle and initialize
+" set backup location
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swap/
+set undodir=~/.vim/undo/
+" Turn on line numbers
+syntax on 
+" Set indenting to hard tabs (nospaces and use 4 chars)
+set tabstop=4
+set autoindent		" always set autoindenting on
+set smartindent
+
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+inoremap <C-U> <C-G>u<C-U>
+
+
+" Start of custom mappings
+
+inoremap <S-CR> <Esc>
+nmap G Go
+nnoremap <ESC> i
+inoremap <Esc> <Esc>`^:w<CR>
+"nnoremap ; i
+"inoremap ; <Esc>`^:w<CR>
+
+nnoremap ) $
+vnoremap <Tab> >
+vnoremap <S-Tab> <
+
+nnoremap d "_d
+vnoremap d "_d

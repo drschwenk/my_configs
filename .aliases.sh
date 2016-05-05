@@ -39,11 +39,14 @@ alias gits='git status'
 alias pd='/usr/local/bin/charm diff'
 alias pm='/usr/local/bin/charm merge'
 
+alias wsd='/usr/local/bin/wstorm diff'
+alias wsm='/usr/local/bin/wstorm merge'
+
 alias awls='aws s3 ls --human-readable'
 
 alias uppip2='pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2 install -U'
 alias uppip3='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
-alias stripWhiteSpace='rename "s/ //g"'
+alias stripWhiteSpace='rename "s/ /_/g"'
 alias start_mongo='mongod --dbpath ./data/db'
 alias goctive='octave --force-gui'
 #alias tt='osascript ~/Library/Application\ Support/iTerm/Scripts/ToggleSolarized.scpt'

@@ -47,6 +47,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/usr/local
 export SPARK_HOME=/Users/schwenk/wrk/ds_utils/spark-1.4.1-bin-hadoop2.4
 export PYTHONPATH=/Users/schwenk/wrk/ds_utils/spark-1.4.1-bin-hadoop2.4/python/:$PYTHONPATH
 
+
 export MTURK_CMD_HOME=/Users/schwenk/wrk/ds_utils/aws-mturk-clt-1.3.1/
 #export JAVA_HOME=/usr/libexec/java_home
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
@@ -86,3 +87,4 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#
