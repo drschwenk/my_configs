@@ -18,19 +18,22 @@ alias pcc='pwd | pbcopy'
 alias oo='open .'
 alias uplocdbase='sudo /usr/libexec/locate.updatedb'
 alias ss='source ~/.zshrc'
-alias hto='sudo htop'
+alias htop='sudo htop'
 
+alias one_sided_diff="diff --changed-group-format='%<' --unchanged-group-format=''"
 alias v='mvim -v'
 alias vv='mvim -c "set lines=70 columns=150" -p'
 # opens vim on remote machine
 alias ee='vv scp://ec2_ds//home/ubuntu/'
 
 alias man='man -P vimpager'
+alias imgcat='zsh /Users/schwenk/wrk/ds_utils/mem/shell/imgcat.sh'
 
 alias py='python3'
 alias py2='python2'
 alias py3='python3'
 alias ipl='jupyter notebook'
+alias llnb='ll *.ipynb'
 alias nbstrip='/Users/schwenk/wrk/ds_utils/nbstripout/nbstripout'
 alias ipyspark='IPYTHON_OPTS="notebook"  ${SPARK_HOME}/bin/pyspark'
 
@@ -58,6 +61,9 @@ alias tokes='ln -s /Users/schwenk/wrk/ds_utils/keysTkingdom .'
 alias ven='source venv/bin/activate'
 
 alias piano='pianobar 2>/dev/null'
+alias trek='play -c2 -n synth whitenoise band -n 100 24 band -n 300 100 gain +20 &> /dev/null'
+alias untrek='killall play'
+
 
 alias hidden_on='defaults write com.apple.finder AppleShowAllFiles True;killall Finder'
 alias hidden_off='defaults write com.apple.finder AppleShowAllFiles FALSE;killall Finder'
@@ -86,6 +92,10 @@ function ipn(){
 	ipl $1$suff
 }
 
+function ggr(){
+	gg -rn $1 .
+}
+
 function gin(){
 	git status --porcelain | grep "??" | cut -c4- >>.gitignore
 }
@@ -104,10 +114,9 @@ function countdown(){
    background_countdown $1 &
 }
 
-function ppjson(){
-	cat $1 | python -m json.tool
+function pprjson(){
+	cat $1 | jq ''
 }
-
 
 function math(){
 	echo "$(($*))"

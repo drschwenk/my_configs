@@ -36,9 +36,12 @@ inoremap <Esc> <Esc>`^:w<CR>
 "nnoremap ; i
 "inoremap ; <Esc>`^:w<CR>
 
-nnoremap ) $
+"nnoremap ) $
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 
-nnoremap d "_d
-vnoremap d "_d
+vmap d "_d
+
+nnoremap <S>f dd
+
+
