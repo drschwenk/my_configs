@@ -1,1 +1,125 @@
-/usr/local/share/jupyter/nbextensions/macros.json
+{
+    "cells" : [
+		{
+            "name" : "general",
+            "lines" : [
+				"%%capture",
+				"from __future__ import division",
+				"import numpy as np",
+				"import pandas as pd",
+        "import scipy.stats as st",
+				"import itertools",
+        "import math",
+        "from collections import Counter, defaultdict",
+                "%load_ext autoreload",
+                "%autoreload 2"
+           ]
+        },
+        {
+            "name" : "plotting",
+            "lines" : [
+				"%%capture",
+				"import matplotlib as mpl",
+				"mpl.use(\"Agg\")",
+				"import matplotlib.pylab as plt",
+				"#%matplotlib notebook",
+                "%matplotlib inline",
+                 "%load_ext base16_mplrc",
+			    "%base16_mplrc light solarized",
+			    "#%base16_mplrc dark solarized",				
+				"plt.rcParams['grid.linewidth'] = 0",
+				"plt.rcParams['figure.figsize'] = (16.0, 10.0)"
+            ]
+        },
+
+		{
+            "name" : "sk_learn",
+            "lines" : [
+              "import sklearn.preprocessing",
+      			  "from sklearn.pipeline import Pipeline",
+              "from sklearn.cross_validation import train_test_split, cross_val_score, KFold",
+              "import sklearn.metrics",
+			           "from scipy.stats import ttest_ind",
+              "#X_train, X_test, y_train, y_test =train_test_split(x,y, test_size = 0.20, random_state = 4)"
+           ]
+        },
+    {
+            "name" : "nlp",
+            "lines" : [
+              "import nltk",
+              "import string",
+              "from nltk.corpus import stopwords",
+              "from sklearn.feature_extraction.text import TfidfVectorizer",
+              "from nltk.tokenize import word_tokenize",
+              "from nltk.stem.porter import PorterStemmer",
+              "from nltk.stem.snowball import SnowballStemmer",
+              "from nltk.stem.wordnet import WordNetLemmatizer"
+           ]
+        },
+
+        {
+            "name" : "sk modeling",
+            "lines" : [
+            "from sklearn.grid_search import GridSearchCV",
+           "from sklearn.linear_model import LogisticRegression",
+            "from sklearn.ensemble import AdaBoostClassifier, GradientBoostingClassifier,RandomForestClassifier",
+            "from sklearn.svm import SVC",
+            "from sklearn.neighbors import KNeighborsClassifier",
+            "from sklearn.feature_selection import SelectKBest, VarianceThreshold ",
+            "from sklearn.cross_validation import ShuffleSplit"
+           ]
+        },
+        {
+            "name" : "dates",
+            "lines" : [
+            "import re",
+            "from datetime import datetime",
+            "import dateutil.parser",
+            "db = client.db_name",
+            "coll = db.coll_name"
+           ]
+        },
+		{
+			"name" : "scraping",
+			"lines" : [
+				"import requests",
+				"from bs4 import BeautifulSoup",
+				"# soup = BeautifulSoup(, 'html.parser')"
+			]
+		},
+        {
+            "name" : "json",
+            "lines" : [
+              "import json",
+              "from bson import json_util",
+              "import pprint",
+              "this_json = json.loads(data)",
+              "pp = pprint.PrettyPrinter(2, depth=6)",
+			  "with open('parsed_quiz_questions.json', 'w') as f json.dump(test_parsed_content, f, indent=4, sort_keys=True)"
+           ]
+        },
+
+        {
+            "name" : "mongo",
+            "lines" : [
+              "#start mongodb with your alias!",
+              "from pymongo import MongoClient",
+              "client = MongoClient",
+              "import json",
+              "from bson import json_util",
+              "import pprint",
+              "this_json = json.loads(data)",
+              "pp = pprint.PrettyPrinter(2, depth=6)"
+           ]
+        },
+		{
+			"name" : "flattening",
+			"lines": [
+				"flattened_dict = {k: v for d in list_of_dicts for k, v in d.items()}",
+				"flattened_dict = {**d1, **d2}",
+				"flattened_list = [item for sublist in l for item in sublist]",
+				"array.flatten()"
+			]
+		}
+      ]
+}

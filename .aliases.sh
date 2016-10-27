@@ -3,6 +3,7 @@ alias l='ls -lthrhp'
 alias la='ls -lthrhpa'
 alias cx='cd -'
 alias lld=ls -d
+alias lip='l *.ipynb'
 
 eval "$(hub alias -s)"
 
@@ -13,6 +14,7 @@ alias s='google'
 alias g="grep -E --color=always"
 alias gg="g -i"
 alias fgg='LC_ALL=C grep --color=always'
+alias hgg='history | gg'
 
 alias pcc='pwd | pbcopy'
 alias oo='open .'
@@ -28,16 +30,24 @@ alias ee='vv scp://ec2_ds//home/ubuntu/'
 
 alias man='man -P vimpager'
 alias imgcat='zsh /Users/schwenk/wrk/ds_utils/mem/shell/imgcat.sh'
+alias lwc='ls | wc -l'
 
 alias py='python3'
 alias py2='python2'
 alias py3='python3'
-alias ipl='jupyter notebook'
-alias llnb='ll *.ipynb'
+#alias ipl='jupyter notebook'
+alias ipl='JUPYTER_CONFIG_DIR=~/.jupyter_sl jupyter notebook'
+alias ipd='JUPYTER_CONFIG_DIR=~/.jupyter_sd jupyter notebook'
+alias ipo='JUPYTER_CONFIG_DIR=~/.jupyter_o jupyter notebook'
+
 alias nbstrip='/Users/schwenk/wrk/ds_utils/nbstripout/nbstripout'
 alias ipyspark='IPYTHON_OPTS="notebook"  ${SPARK_HOME}/bin/pyspark'
+alias kernelven='python -m ipykernel install --user --name venv --display-name "venv"'
 
 alias gits='git status'
+alias grs='git reset --hard HEAD'
+
+alias rmm='rm -r'
 
 alias pd='/usr/local/bin/charm diff'
 alias pm='/usr/local/bin/charm merge'
@@ -115,7 +125,10 @@ function countdown(){
 }
 
 function pprjson(){
-	cat $1 | jq ''
+	cat $1 | jq -C '' | less
+}
+function prjson(){
+	cat $1 | jq -C '' 
 }
 
 function math(){

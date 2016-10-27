@@ -1,0 +1,363 @@
+/*
+
+    Name:       Base16 Twilight Dark
+    Author:     David Hart (http://hart-dev.com)
+
+    CodeMirror template adapted for IPython Notebook by Nikhil Sonnad (https://github.com/nsonnad/base16-ipython-notebook)
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-chrome-devtools)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+
+/* Uncomment to use a custom font */
+div#notebook, div.CodeMirror, div.output_area pre, div.output_wrapper, div.prompt {
+  font-family: 'Inconsolata', monospace; font-size: 12pt;
+}
+
+
+/*Sherif's customizations*/
+
+/*Otherwise, a lot of backgrounds are white.*/
+div#notebook {background-color: #002b36; border-top: none;}
+div#notebook-container {background-color: #002b36;}
+
+/*Don't need to see jupyter logo, filename, last saved, etc.*/
+div#header-container { display: none; }
+
+div.prompt.input_prompt { font-size: 10px; }
+div.prompt.output_prompt { font-size: 10px; }
+
+/*This prevents scrollable output from having an ugly grey
+shadow around it*/
+div.output.output_scroll {
+    box-shadow: none;
+}
+
+.notebook_app {
+    background-color: #002b36;
+}
+.notebook_app #header {
+    box-shadow: none !important;
+}
+
+/*Scroll bars*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #484848;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #484848;
+}
+
+/* give strings a bit of highlight */
+
+
+/* Make comments grey, not italic, and give them an easy background */
+
+
+/* Make ` ` code blocks look better than black text with white background */
+.rendered_html code {
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: #53a1fe;
+}
+
+/* give plots a non-black background so that black text and labels are visible */
+div.output_area img, div.output_area svg {
+    background-color: lightblue;
+}
+
+/*########################*/
+
+
+/* GLOBALS */
+body {background-color: #002b36;}
+a {color: #268bd2;}
+
+#kernel_indicator {
+    float: right !important;
+    color: #268bd2;
+}
+#kernel_indicator .kernel_indicator_name {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12pt;
+}
+#modal_indicator {
+    float: right !important;
+    color: #268bd2;
+
+}
+
+/* INTRO PAGE */
+.toolbar_info, .list_container {color: #eee8d5;}
+
+/* list of notebooks */
+div.list_item.row:hover {
+    background-color: DarkSlateGray;
+}
+
+div.dynamic-instructions {
+    color: white;
+}
+
+/* NOTEBOOK */
+
+/* comment out this line to bring the toolbar back */
+div#maintoolbar, div#header {background-color: #002b36 !important;}
+div#menubar {background-color: #002b36 !important;}
+
+div.navbar{
+    background-color: #002b36 !important;
+}
+
+div.input_prompt {color: #d33682;}
+div.output_prompt {color: #6c71c4;}
+div.input_area {
+  background-color: #002b36 !important;
+  border-radius: 0px;
+  border: 1px solid #586e75;
+}
+div.output_area pre {font-weight: normal; color: #93a1a1;}
+div.output_subarea {font-weight: normal; color: #93a1a1;}
+.container { width:100% !important;}
+
+.rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
+  border: 1px  #93a1a1 solid;
+  color: #93a1a1;
+}
+div.output_html { font-family: sans-serif; }
+table.dataframe tr {border: 1px #93a1a1;}
+
+div.cell.selected {border-radius: 0px;}
+div.cell.edit_mode {border-radius: 0px; border: thin solid #6c71c4;}
+div.text_cell_render, div.output_html {color: #93a1a1;}
+
+button.close {
+    padding: 0px;
+    cursor: pointer;
+    background: transparent none repeat scroll 0% 0%;
+    border: 0px none;
+}
+.close {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    color: #3572C6;
+    text-shadow: 0px 1px 0px rgba(53, 87, 120, 0.2);
+    opacity: 0.3;
+}
+.close:hover {
+    color: #3572C6;
+    text-shadow: 0px 1px 0px rgba(53, 87, 120, 0.2);
+    opacity: 0.9;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    font-size: 12pt;
+    line-height: 1.6;
+    color: #93a1a1;
+    background-color: #002b36;
+    background-image: none;
+    border: 1px solid rgba(53, 87, 120, 0.95);
+    border-radius: 2px;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid rgba(184, 184, 184, 0.75);
+}
+.input-form-control:hover:active {
+      background-color: rgba(184, 184, 184, 0.75);
+      selected: rgba(184, 184, 184, 0.75);
+}
+
+.btn {
+    color: #93a1a1;
+    background: #002b36;
+    font-size: 12pt;
+    font-weight: normal;
+    border: 0 none !important;
+    box-shadow: none !important;
+    text-shadow: none;
+    vertical-align: 0px;
+}
+
+.btn-group > .btn-mini {
+    color: #93a1a1;
+    background: #002b36;
+    font-size: 11pt;
+    font-weight: normal;
+    border: 0 none !important;
+    box-shadow: none !important;
+    text-shadow: none;
+}
+.btn:hover {
+    color: #93a1a1;
+    background: #002b36;
+    background-color: #002b36;
+    background-image: none;
+}
+.btn-group > .btn-mini:hover {
+    color: #93a1a1;
+    background: #002b36;
+    background-color: #002b36;
+    background-image: none;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.ipython_tooltip {
+    border: 2px solid #4c4c4c;
+    box-shadow: none;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1000;
+    background-color: #dddddd;
+}
+
+.ipython_tooltip .tooltiptext pre {
+    border: 0px none;
+    border-radius: 0px;
+    background-color: #dddddd;
+    color: #073642;
+}
+
+
+
+
+span.ansiblack {color: #073642;}
+span.ansiblue {color: #2aa198;}
+span.ansigray {color: #839496;}
+span.ansigreen {color: #859900;}
+span.ansipurple {color: #6c71c4;}
+span.ansired {color: #dc322f;}
+span.ansiyellow {color: #b58900;}
+
+div.output_stderr {background-color: #dc322f;}
+div.output_stderr pre {color: #eee8d5;}
+
+.solarized.base03 { color: #002b36; }
+.solarized.base02 { color: #073642; }
+.solarized.base01 { color: #586e75; }
+.solarized.base00 { color: #657b83; }
+.solarized.base0 { color: #839496; }
+.solarized.base1 { color: #93a1a1; }
+.solarized.base2 { color: #eee8d5; }
+.solarized.base3  { color: #fdf6e3; }
+.solarized.solar-yellow  { color: #b58900; }
+.solarized.solar-orange  { color: #cb4b16; }
+.solarized.solar-red { color: #dc322f; }
+.solarized.solar-magenta { color: #d33682; }
+.solarized.solar-violet  { color: #6c71c4; }
+.solarized.solar-blue { color: #268bd2; }
+.solarized.solar-cyan { color: #2aa198; }
+.solarized.solar-green { color: #859900; }
+
+/* Color scheme for code-mirror */
+
+.CodeMirror {
+  line-height: 1.45em;
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
+.CodeMirror {
+  color: #839496;
+  background-color:  #002b36;
+  text-shadow: #002b36 0 1px;
+}
+/* .CodeMirror {
+  background-color: #fdf6e3;
+  color: #657b83;
+  text-shadow: #eee8d5 0 1px;
+} */
+.CodeMirror .CodeMirror-widget {
+  text-shadow: none;
+}
+
+.CodeMirror span.cm-header { color: #586e75; }
+.CodeMirror span.cm-quote { color: #93a1a1; }
+
+.CodeMirror span.cm-keyword { color: #859900; }
+.CodeMirror span.cm-atom { color: #d33682; }
+.CodeMirror span.cm-number { color: #dc322f; }
+.CodeMirror span.cm-def { color: #268bd2; }
+
+.CodeMirror span.cm-variable { color: #93a1a1; }
+.CodeMirror span.cm-variable-2 { color: #b58900; }
+.CodeMirror span.cm-variable-3 { color: #6c71c4; }
+
+.CodeMirror span.cm-property { color: #2aa198; }
+.CodeMirror span.cm-operator { color: #6c71c4; }
+
+.CodeMirror span.cm-comment { color: #586e75; font-style:italic; }
+
+.CodeMirror span.cm-string { color: #2aa198; }
+.CodeMirror span.cm-string-2 { color: #b58900; }
+
+.CodeMirror span.cm-meta { color: #859900; }
+.CodeMirror span.cm-qualifier { color: #b58900; }
+.CodeMirror span.cm-builtin { color: #6c71c4; }
+.CodeMirror span.cm-bracket { color: #cb4b16; }
+.CodeMirror .CodeMirror-matchingbracket { text-decoration: underline; color: #eee8d5 !important;}
+.CodeMirror .CodeMirror-nonmatchingbracket { color: #dc322f; }
+.CodeMirror-cursor {border-left: 1px solid #839496 !important;}
+.CodeMirror span.cm-tag { color: #93a1a1; }
+.CodeMirror span.cm-attribute { color: #2aa198; }
+.CodeMirror span.cm-hr {
+  color: transparent;
+  border-top: 1px solid #586e75;
+  display: block;
+}
+.CodeMirror span.cm-link { color: #93a1a1; cursor: pointer; }
+.CodeMirror span.cm-special { color: #6c71c4; }
+.CodeMirror span.cm-em {
+  color: #999;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.CodeMirror span.cm-strong { color: #eee; }
+.CodeMirror span.cm-error,
+.CodeMirror span.cm-invalidchar {
+  color: #586e75;
+  border-bottom: 1px dotted #dc322f;
+}
+
+.CodeMirror div.CodeMirror-selected { background: #073642; }
+.CodeMirror.CodeMirror ::selection { background: rgba(7, 54, 66, 0.99); }
+.CodeMirror .CodeMirror-line::-moz-selection, span .CodeMirror-line > span::-moz-selection, span .CodeMirror-line > span > span::-moz-selection { background: rgba(7, 54, 66, 0.99); }
+
+
+
+/* Little shadow on the view-port of the buffer view */
+.CodeMirror {
+  -moz-box-shadow: inset 7px 0 12px -6px #000;
+  -webkit-box-shadow: inset 7px 0 12px -6px #000;
+  box-shadow: inset 7px 0 12px -6px #000;
+}
+
+/* Gutter border and some shadow from it  */
+.CodeMirror .CodeMirror-gutters {
+  background: #002b36; border-right: 0px;
+  border-right: 1px solid;
+}
+
+

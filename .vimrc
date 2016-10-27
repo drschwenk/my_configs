@@ -144,8 +144,6 @@ endif
 inoremap <S-CR> <Esc>
 nmap G Go
 
-nnoremap ; i
-inoremap ; <Esc>`^:w<CR>
 nnoremap ) $
 
 vnoremap <Tab> > 
