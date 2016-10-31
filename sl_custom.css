@@ -77,8 +77,16 @@ div.output_area img, div.output_area svg {
 
 
 /* GLOBALS */
-body {background-color: #f9f9f9;}
-a {color: #303030; font-family: 'Inconsolata', monospace; }
+body {
+	font-family: 'Inconsolata', monospace; font-size: 13pt;
+    background: #fdf6e3;	
+	background-color: #fdf6e3;
+    font-size: 13pt;
+    line-height: 1.42857;
+    color: #002b36;
+}
+a {color: #303030;}
+
 
 #kernel_indicator {
     float: right !important;
@@ -94,9 +102,74 @@ a {color: #303030; font-family: 'Inconsolata', monospace; }
     color: #268bd2;
 
 }
-
 /* INTRO PAGE */
 .toolbar_info, .list-container {color: #073642;}
+
+.dropdown-menu {
+    background: #fdf6e3;	
+	background-color: #fdf6e3;
+    border: thin solid #dbdbdb;
+    box-shadow: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    list-style: outside none none;
+    font-size: 12pt;
+    text-align: left;
+}
+.dropdown-menu:hover{
+    background: #fdf6e3;	
+	background-color: #fdf6e3;
+    border: thin solid #dbdbdb;
+    box-shadow: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 12pt;
+    line-height: 1.42857;
+    color: #002b36;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: none;
+    clear: both;
+    background: #fdf6e3;	
+	background-color: #fdf6e3;
+    background-clip: padding-box;
+    font-weight: normal;
+    line-height: 1.42857;
+    color: #002b36;
+    white-space: nowrap;
+}
+.dropdown-menu > li > a:hover {
+    background-clip: padding-box;
+    color: #93a1a1;
+    padding: none;
+    background: #dbdbdb;
+}
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 8px 0px;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+select{
+    background: #fdf6e3 !important;	
+	background-color: #fdf6e3 !important;
+    color: #002b36!important;	
+    font-size: 13pt;
+}
+select:focus {
+    background: #fdf6e3 !important;	
+	background-color: #fdf6e3 !important;
+    color: #002b36!important;
+}
+
 
 /* list of notebooks */
 div.list_item.row:hover {
@@ -296,7 +369,7 @@ div.output_stderr pre {color: #eee8d5;}
 .CodeMirror span.cm-number { color: #dc322f; }
 .CodeMirror span.cm-def { color: #268bd2; }
 
-.CodeMirror span.cm-variable { color: #073642; }
+.CodeMirror span.cm-variable { color: #002b36; }
 .CodeMirror span.cm-variable-2 { color: #b58900; }
 .CodeMirror span.cm-variable-3 { color: #6c71c4; }
 
@@ -377,28 +450,28 @@ div.output_stderr pre {color: #eee8d5;}
   border-color: #eee8d5;
 }
 
-/* Common */
-.CodeMirror .CodeMirror-linenumber {
-  color: #586e75;
-  padding: 0 5px;
-}
-.CodeMirror .CodeMirror-guttermarker-subtle { color: #586e75; }
-/* .CodeMirror .CodeMirror-guttermarker { color: #ddd; } */
-.CodeMirror .CodeMirror-guttermarker { color: #cb4b16; }
+/*[> Common <]*/
+/*.CodeMirror .CodeMirror-linenumber {*/
+  /*color: #586e75;*/
+  /*padding: 0 5px;*/
+/*}*/
+/*.CodeMirror .CodeMirror-guttermarker-subtle { color: #586e75; }*/
+/*[> .CodeMirror .CodeMirror-guttermarker { color: #ddd; } <]*/
+/*.CodeMirror .CodeMirror-guttermarker { color: #cb4b16; }*/
 
-.CodeMirror .CodeMirror-gutter .CodeMirror-gutter-text {
-  color: #586e75;
-}
+/*.CodeMirror .CodeMirror-gutter .CodeMirror-gutter-text {*/
+  /*color: #586e75;*/
+/*}*/
 
-.CodeMirror .CodeMirror-cursor { border-left: 1px solid #657b83 !important;}
+/*.CodeMirror .CodeMirror-cursor { border-left: 1px solid #657b83 !important;}*/
 
-/*
-Active line. Negative margin compensates left padding of the text in the
-view-port
-*/
-/* .CodeMirror .CodeMirror-activeline-background {
-  background: rgba(255, 255, 255, 0.10);
-} */
-.CodeMirror .CodeMirror-activeline-background {
-  background: rgba(0, 0, 0, 0.10);
-}
+/*/**/
+/*Active line. Negative margin compensates left padding of the text in the*/
+/*view-port*/
+/**/*/
+/*/* .CodeMirror .CodeMirror-activeline-background {*/
+  /*background: rgba(255, 255, 255, 0.10);*/
+/*} */*/
+/*.CodeMirror .CodeMirror-activeline-background {*/
+  /*background: rgba(0, 0, 0, 0.10);*/
+/*}*/

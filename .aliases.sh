@@ -111,11 +111,11 @@ function gin(){
 }
 
 function pg(){
-	time cat $1 | parallel --block 30M  --pipe LC_ALL=C  fgrep -i --color=always $2
+	time cat $2 | parallel --block 30M  --pipe LC_ALL=C  fgrep -i --color=always $1
 }
 
 function pgr(){
-	time cat $1 | parallel --block 30M  --pipe LC_ALL=C  grep -i --color=always $2
+	time cat $2 | parallel --block 30M  --pipe LC_ALL=C  grep -i --color=always $1
 }
 
 # Countdown

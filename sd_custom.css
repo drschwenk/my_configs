@@ -81,8 +81,17 @@ div.output_area img, div.output_area svg {
 
 
 /* GLOBALS */
-body {background-color: #002b36;}
+body {
+	font-family: 'Inconsolata', monospace; font-size: 13pt;
+    background: #002b36;	
+	background-color: #002b36;
+    font-size: 13pt;
+    line-height: 1.42857;
+    color: #93a1a1;
+}
 a {color: #268bd2;}
+
+
 
 #kernel_indicator {
     float: right !important;
@@ -102,6 +111,72 @@ a {color: #268bd2;}
 /* INTRO PAGE */
 .toolbar_info, .list_container {color: #eee8d5;}
 
+.dropdown-menu {
+    background: #002b36;	
+	background-color: #002b36;
+    border: thin solid #dbdbdb;
+    box-shadow: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    list-style: outside none none;
+    font-size: 12pt;
+    text-align: left;
+}
+.dropdown-menu:hover{
+    background: #002b36;	
+	background-color: #002b36;
+    border: thin solid #dbdbdb;
+    box-shadow: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 12pt;
+    line-height: 1.42857;
+    color: #93a1a1;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: none;
+    clear: both;
+    background: #002b36;	
+	background-color: #002b36;
+    background-clip: padding-box;
+    font-weight: normal;
+    line-height: 1.42857;
+    color: #93a1a1;
+    white-space: nowrap;
+}
+.dropdown-menu > li > a:hover {
+    background-clip: padding-box;
+    color: #93a1a1;
+    padding: none;
+    background: #dbdbdb;
+}
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 8px 0px;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+select{
+    background: #002b36 !important;	
+	background-color: #002b36 !important;
+    color: #93a1a1!important;	
+    font-size: 13pt;
+}
+select:focus {
+    background: #002b36 !important;	
+	background-color: #002b36 !important;
+    color: #93a1a1!important;
+}
+
+
 /* list of notebooks */
 div.list_item.row:hover {
     background-color: DarkSlateGray;
@@ -119,6 +194,7 @@ div#menubar {background-color: #002b36 !important;}
 
 div.navbar{
     background-color: #002b36 !important;
+	border-color: #002b36 !important;
 }
 
 div.input_prompt {color: #d33682;}
