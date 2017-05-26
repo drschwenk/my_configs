@@ -33,6 +33,7 @@ inoremap <S-CR> <Esc>
 nmap G Go
 nnoremap <ESC> i
 inoremap <Esc> <Esc>`^:w<CR>
+nnoremap ss i<space><esc>
 "nnoremap ; i
 "inoremap ; <Esc>`^:w<CR>
 

@@ -1,0 +1,24 @@
+{
+  "Exporter": {
+    "preprocessors": [
+      "pre_codefolding.CodeFoldingPreprocessor",
+      "pre_pymarkdown.PyMarkdownPreprocessor"
+    ],
+    "template_path": [
+      "/Users/schwenk/Library/Jupyter/templates"
+    ]
+  },
+  "NotebookApp": {
+    "extra_template_paths": [
+      "/Users/schwenk/Library/Jupyter/templates"
+    ],
+    "nbserver_extensions": {
+      "jupyter_nbextensions_configurator": true,
+      "nbextensions": true
+    }
+  },
+  "NbConvertApp": {
+    "postprocessor_class": "post_embedhtml.EmbedPostProcessor"
+  },
+  "version": 1
+}

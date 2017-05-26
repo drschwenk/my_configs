@@ -41,14 +41,14 @@ plugins=(gitfast colorize pip python brew osx
 source $ZSH/oh-my-zsh.sh
 source $HOME/.access_tokes.sh
 source $HOME/.aliases.sh
-source /usr/local/etc/grc.bashrc
-
+#source /usr/local/etc/grc.bashrc 
 #export SPARK_HOME=/Users/schwenk/wrk/ds_utils/spark-1.4.1-bin-hadoop2.4
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/usr/local/sbin:$SPARK_HOME/bin:/usr/local/texlive/2015/bin/universal-darwin"
 # export MANPATH="/usr/local/man:$MANPATH"
 #export SPARK_HOME=/Users/schwenk/wrk/ds_utils/spark-1.4.1-bin-hadoop2.4
 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0rc0-py3-none-any.whl
-
+export BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 export MTURK_CMD_HOME=/Users/schwenk/wrk/ds_utils/aws-mturk-clt-1.3.1/
 #export JAVA_HOME=/usr/libexec/java_home
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
@@ -89,3 +89,4 @@ bindkey "^[e" end-of-line
 
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 #
+export PATH="/usr/local/opt/opencv3/bin:$PATH"

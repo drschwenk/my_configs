@@ -22,12 +22,14 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'eiginn/netrw'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'maksimr/vim-jsbeautify'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Git plugin not hosted on GitHub
 Plugin 'Gundo'
@@ -145,7 +147,7 @@ inoremap <S-CR> <Esc>
 nmap G Go
 
 nnoremap ) $
-
+nnoremap ss i<space><esc>
 vnoremap <Tab> > 
 vnoremap <S-Tab> <
 inoremap ( ()<Esc>i
@@ -162,3 +164,13 @@ vnoremap d "_d
 
 vmap r "_dP
 vmap r "_dP
+
+
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge

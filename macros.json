@@ -91,14 +91,10 @@
             "name" : "json",
             "lines" : [
               "import json",
-              "from bson import json_util",
               "import pprint",
-              "this_json = json.loads(data)",
-              "pp = pprint.PrettyPrinter(2, depth=6)",
-			  "with open('parsed_quiz_questions.json', 'w') as f json.dump(test_parsed_content, f, indent=4, sort_keys=True)"
+              "pp = pprint.PrettyPrinter(2, depth=6)"
            ]
         },
-
         {
             "name" : "mongo",
             "lines" : [
@@ -112,6 +108,14 @@
               "pp = pprint.PrettyPrinter(2, depth=6)"
            ]
         },
+		{
+			"name": "vision",
+			"lines": [
+				"import os",
+				"import cv2",
+				"import PIL.Image as Image"
+			]
+		},
 		{
 			"name" : "flattening",
 			"lines": [

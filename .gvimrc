@@ -7,4 +7,4 @@ nmap <leader>2 :set lines=40 columns=120<CR><C-w>o
 
 nnoremap <ESC> i
 inoremap <Esc> <Esc>`^:w<CR>
-autocmd  WinLeave * :!open -a iTerm
+"autocmd  WinLeave * :!open -a iTerm
